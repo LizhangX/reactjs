@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>test</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+    </head>
+    <body>
+        <div id="app"></div>
+            
+    <script src="node_modules/react/dist/react.js"></script>
+    <script src="node_modules/react-dom/dist/react-dom.js"></script>
+    <script>
+        // console.log(React);
+        // console.log(ReactDOM);
+        setInterval( () => {
+            var date = new Date();
+            var content = "The time is: " + date.toLocaleTimeString();
+            const myh1 = React.createElement('h1', null, content);
+            // console.log(JSON.stringify(myButton));
+            ReactDOM.render(myh1, document.getElementById('app'));
+        }, 100);
+    </script>
+    </body>
+</html>
