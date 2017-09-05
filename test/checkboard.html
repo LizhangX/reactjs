@@ -39,6 +39,8 @@
             return React.createElement("div", {style: styles.row} , cells)
         }
         function Cell (props) {
+            console.log('cell props:' , props);
+            console.log('conditional:', props % 2 == 0);
             if (props % 2 == 0) {
                 return React.createElement("div", {style: Object.assign(styles.cell, styles.colorA)}, null)
             } else {
