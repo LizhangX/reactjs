@@ -27,7 +27,7 @@
             for (var i = 0; i < props; i++) {
                 rows.push(Row(props, i));
             }
-            console.log('rows', rows);
+            // console.log('rows', rows);
             return React.createElement("div", null, rows)
         }
         function Row (props, row_num) {
@@ -37,17 +37,16 @@
                 console.log(cell);;
                 cells.push(cell);
             };
-            console.log(cells)
+            // console.log(cells)
 
             return React.createElement("div", {style: styles.row} , cells)
         }
         function Cell (props, row_num) {
             var color = "";
-            console.log('cell props:' , props);
-            console.log('conditional:', props % 2 == 0);
+            // console.log('cell props:' , props);
+            // console.log('conditional:', props % 2 == 0);
 
             var element = React.createElement("div", {style: {height: '20px', width: '20px', display:'inline-block'}}, null)
-            
             if (row_num % 2 == 0) {
                 if (props % 2 == 0) {
                     color = 'black';
